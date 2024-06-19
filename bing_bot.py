@@ -1,4 +1,5 @@
 from driver_manager import WebDriverConf
+from wonderwords import RandomWord
 from config.config import BROWSER, DEVICE, EMAIL, PASSWORD , LOGIN_URL, BING_URL, RANDOMWORDS_API_URL 
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -95,15 +96,14 @@ class BingSearchBot:
         print("Start Search on Bing automatically")
         # Open Bing
         self.browser.get(self.bing_url)
-        # Define a function to get random words from API
-        def get_random_words():
-            response = requests.get(randomwords_api_url)
-            return response.json()
+        # Define a function to get random words
+        get_random_words = RandomWord()
 
         for i in range(90):
-            # Get random words from API
-            random_words = get_random_words()
+            # Get random words
+            random_words =  get_random_words.random_words(3)
             search_word = ""
+
             for word in random_words:
                 # Add regex pattern to each word
                 regex_word = re.sub(r'([.*+?^${}()|\[\]\/\\])', r'\\\1', word)
