@@ -92,10 +92,12 @@ class BingSearchBot:
         except Exception as e:
             print(f"Error logging in: {e}")
 
-    def search_on_bing(self):
-        print("Start Search on Bing automatically")
         # Open Bing
         self.browser.get(self.bing_url)
+
+    def search_on_bing(self):
+        print("Start Search on Bing automatically")
+
         # Define a function to get random words
         get_random_words = RandomWord()
 

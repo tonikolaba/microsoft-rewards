@@ -18,16 +18,20 @@
 </p>
 
 
-# Microsoft Rewards Automation Tests :technologist::bulb:
+# Microsoft Rewards :medal_sports: Automation Tests
 
 A project created in Python-based automation script using Selenium to automate the process of earning Microsoft Rewards points through targeted searches, thereby boosting rewards balance.
 
 
-## Run
+## Run :technologist::bulb:
 
 - Create an `.env` file & add all data as in the example file `.env.example`, set data as you need.
 - Make sure you're using the same tools and version settings as we have tested
 - For the moment, it is the test for MFA Microsoft accounts, and need to manually add the password of your PC, for users with just email & password need to uncomment the code.
+
+- run by type `python .\bing_bot.py` when `.\bing_bot.py` name file.
+
+- May not need to install
 
 ```
  pip install python-dotenv 
@@ -35,8 +39,6 @@ A project created in Python-based automation script using Selenium to automate t
  pip install selenium 
  pip install msedgedriver
 ```
-
-- run by type `python .\bing_bot.py` when `.\bing_bot.py` name file.
 
 
 #### Browser Settings
@@ -62,7 +64,15 @@ You can choose between the following browsers:
     2: Mozilla Firefox
     3: Microsoft Edge
 
+#### Drivers Use 
 
+| Browser | Manually Download | Automatically* | 
+| ------- |----------------|----------------|
+|Chrome   | `https://chromedriver.chromium.org/downloads` | `ChromeService(ChromeDriverManager().install())` |
+|Firefox  | `https://github.com/mozilla/geckodriver/releases` |`FirefoxService(GeckoDriverManager().install())`  |
+|Edge     | `https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/` | `EdgeService(EdgeChromiumDriverManager().install())` |
+
+* On the `driver_manager.py` file, you need to change the `service` to respective values and make sure to be imported and keep browsers updated.
 
 ### Developed
 
@@ -70,5 +80,5 @@ You can choose between the following browsers:
   <a href="https://www.linkedin.com/company/kolabashpk" target="blank"><img src="https://s6.imgcdn.dev/R7jxC.png" width="390" alt="Kolaba logo" /></a>
 </p>
 <p align="center">
-with ❤️ by: <a href="https://github.com/tonikolaba" target="blank">tonikolaba</a> ©️
+with ❤️ by: <a href="https://github.com/tonikolaba" target="blank">nkolaba</a> ©️
 </p>

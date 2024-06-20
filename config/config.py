@@ -7,7 +7,6 @@ BROWSER_TYPES = {
     1: 'chrome',
     2: 'firefox',
     3: 'edge',
-    # Add more browser types as needed
 }
 
 DEVICE_TYPES = {
@@ -22,3 +21,6 @@ PASSWORD = os.getenv("PASSWORD")
 LOGIN_URL = os.getenv("LOGIN_URL")
 BING_URL = os.getenv("BING_URL")
 RANDOMWORDS_API_URL = os.getenv("RANDOMWORDS_API")
+DRIVER_PATH_CHROME = os.getenv("DRIVER_PATH_CHROME")
+DRIVER_PATH_FIREFOX = os.getenv("DRIVER_PATH_FIREFOX")
+DRIVER_PATH_EDGE = os.getenv("DRIVER_PATH_EDGE")
