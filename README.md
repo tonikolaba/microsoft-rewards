@@ -31,6 +31,14 @@ A project created in Python-based automation script using Selenium to automate t
 
 - run by type `python .\bing_bot.py` when `.\bing_bot.py` name file.
 
+:warning:
+```sh
+-> Update browser drivers. 
+-> Use Edge for accessibility.
+-> When using the mobile version, choose to inspect and manually set the mobile view. 
+-> Clear browsing history and cache.
+```
+
 - May not need to install
 
 ```
@@ -38,6 +46,7 @@ A project created in Python-based automation script using Selenium to automate t
  pip install webdriver-manager 
  pip install selenium 
  pip install msedgedriver
+ pip install selenium-wire
 ```
 
 
